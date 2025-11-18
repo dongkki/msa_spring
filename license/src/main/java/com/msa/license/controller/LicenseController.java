@@ -40,8 +40,8 @@ public class LicenseController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<LicenseResponse> updateLicense(@PathVariable Long id, @RequestBody String licenseName) {
-        LicenseResponse licenseResponse = licenseService.updateLicense(id, licenseName);
+    public ResponseEntity<LicenseResponse> updateLicense(@PathVariable Long id, @RequestBody LicenseRequest licenseRequest) {
+        LicenseResponse licenseResponse = licenseService.updateLicense(id, licenseRequest.getLicenseName());
         return ResponseEntity.ok(licenseResponse);
     }
 
