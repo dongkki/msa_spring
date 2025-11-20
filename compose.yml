@@ -51,6 +51,8 @@ services:
     depends_on:
       oracle:
         condition: service_healthy
+      config:
+        condition: service_healthy
     restart: unless-stopped
 
 volumes:
