@@ -2,7 +2,7 @@ package com.msa.license.client;
 
 import com.msa.license.client.dto.FirmDto;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -13,6 +13,15 @@ public interface FirmClient {
     List<FirmDto> getAllFirms();
 
     @GetMapping("/firm/{firmId}")
-    
+    FirmDto getFirmById(@PathVariable("firmId") Long firmId);
+
+    @PostMapping("/firm")
+    FirmDto createFirm(@RequestBody FirmDto firmDto);
+
+    @PutMapping("/firm/{firmId}")
+    FirmDto updateFirm(@PathVariable("firmId") Long firmId, @RequestBody FirmDto firmDto);
+
+    @DeleteMapping("/firm/{firmId}")
+    void deleteFirm(@PathVariable("firmId") Long firmId);
 
 }

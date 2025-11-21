@@ -1,5 +1,6 @@
 package com.msa.license.dto;
 
+import com.msa.license.client.dto.FirmDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,5 @@ public class LicenseWithFirmDto {
     private LocalDate createdDate;
 
     private Long firmId;
-    private String firmName;
-    private LocalDate foundedDate;
+    private FirmDto firmDto;
 }

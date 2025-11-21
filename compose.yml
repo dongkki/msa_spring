@@ -59,6 +59,9 @@ services:
       - 8080:8080
     networks:
       - oracle-network
+    build:
+      context: license
+      dockerfile: Dockerfile3
     depends_on:
       oracle:
         condition: service_healthy
