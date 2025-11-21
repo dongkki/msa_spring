@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/dongkki/msa.git
+          uri: https://github.com/dongkki/msa_spring.git
           username: dongkki
           password: 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
           searchPaths: /prop, /prop/{application}
