@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dongkki/msa.git
+          username: dongkki
+          password: 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
+          searchPaths: /prop, /prop/{application}
+          clone-on-start: true
+
+server:
+  port: 8070

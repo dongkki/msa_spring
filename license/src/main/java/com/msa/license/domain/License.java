@@ -3,6 +3,7 @@ package com.msa.license.domain;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
 
@@ -19,5 +20,8 @@ public class License {
     private String licenseName;
 
     @Column
+    @CreationTimestamp
     private LocalDate createdDate;
+
+    private Long firmId;
 }
