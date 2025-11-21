@@ -9,7 +9,7 @@ spring:
         git:
           uri: https://github.com/dongkki/msa_spring.git
           username: dongkki
-          password: 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
+          password: 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
           searchPaths: /prop, /prop/{application}
           clone-on-start: true
 
